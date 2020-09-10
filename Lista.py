@@ -32,14 +32,15 @@ class Lista:
         print( "Tamanho da Lista: " + str(self.tamanho ))
 
     def reversed(self, valor):
-        no = No(valor)
-        print("chegou!")
-        self.inicio = self.fim = no
+        inverso= []
+        if self.inicio == None:
+            print("Lista Vazia")
+
         aux = self.inicio
         while( aux ):
-            print( aux.dado , "\n" )
+            inv = aux.dado
+            inverso.append(inv)
             aux = aux.proximo
-
-            
-        print( "Tamanho da Lista: " + str(self.tamanho ))
+        for i in reversed(inverso):
+            print(i)
         
